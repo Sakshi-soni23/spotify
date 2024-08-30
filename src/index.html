@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script src="../src/javascript"></script>
+    
+    <style>
+      body {
+        margin: 0;
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .songinfo img{
+        opacity: 0;
+        transition: opacity 1s ease-in;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        margin-left: -20rem;
+      }
+      .container {
+        min-height: 72vh;
+        margin-left: 9rem;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 76%;
+      }
+      .bottom {
+        height: 60px;
+        bottom: 0;
+        align-items: center;
+        display: flex;
+      }
+      #progressivebar {
+        width: 80vw;
+        cursor: pointer;
+      }
+      .img-container img {
+        width: 20rem;
+        height: 29rem;
+        margin-right: 16rem;
+        margin-bottom: 1rem;
+      }
+      .soundlist h1 {
+        margin-left: 3rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: -1rem;
+      }
+      .songinfo {
+        margin-right: 70vw;
+        margin-top: -3rem;
+        height: 2rem;
+      }
+      .songitem {
+        margin-left: 2rem;
+      }
+      .brand img {
+        margin-left: -27rem;
+        width: 26rem;
+        height: 41px;
+      }
+      nav ul li {
+        padding: 0 12px;
+        margin-left: 1rem;
+      }
+      .songitem-container {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="h-16 bg-black list-none flex text-white justify-center">
+        <li class="brand text-white flex font-bold text-xl">
+          <img class="img" src="../img/logo block.png" alt="spotify" />Spotify
+        </li>
+        <li class="link mt-5 hover:cursor-pointer">Home</li>
+        <li class="link mt-5 hover:cursor-pointer">About</li>
+      </ul>
+    </nav>
+
+    <div
+      class="container bg-black text-white flex font-serif m-7 rounded-md p-9"
+    >
+      <div class="img-container">
+        <img src="../img/imageback.jpg" alt=""/>
+      </div>
+      <div class="soundlist">
+        <h1 class="">Best of NCS - No Copyrigths sounds</h1>
+        <div class="songitem-container">
+          <div
+            class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-80 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-60 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="soundbanner"></div>
+    </div>
+    <div class="bottom bottom-0 bg-black text-white flex-col">
+      <input type="range" name="range" id="progressivebar" min="0" max="100" />
+      <div class="icons mt-3">
+        <i class="cursor-pointer fa-solid fa-2x fa-backward"  id="previous"></i>
+        <i
+          class="cursor-pointer fa-regular fa-2x fa-circle-play"
+          id="masterplay"
+        ></i>
+        <i class=" cursor-pointer fa-solid fa-2x fa-forward" id="next"></i>
+      </div>
+      <div class="songinfo flex">
+        <img src="../img/gif.playing.gif" alt="" width="50px">
+        Tu hi haqeeat
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://example.com/fontawesome/v6.5.2/js/fontawesome.js"
+    data-auto-replace-svg="nest"
+  ></script>
+  <script src="https://example.com/fontawesome/v6.5.2/js/solid.js"></script>
+  <script src="https://example.com/fontawesome/v6.5.2/js/brands.js"></script>
+  <script src="script.js"></script>
+  
+</html>

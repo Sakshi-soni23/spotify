@@ -1,0 +1,25 @@
+console.log('welcome to spotify');
+const songAudio = new Audio('../src/sounds/humdard.mp3');
+const heartAudio = new Audio('../src/sounds/heartbeat.mp3');
+const tuhiAudio = new Audio('../src/sounds/tu hi ashique.mp3');
+// tuhiAudio.play();
+
+ //select buttons
+
+ const prevBtn = document.querySelector('#previous');
+ const masterplay=document.querySelector('#masterplay');
+ const nextBtn = document.querySelector('#next');
+ //array of songs
+
+ const songs = [
+    {ele:songAudio , audioname: 'humdard'}, 
+{ele:heartAudio , audioname : 'heartbeat'},
+{ele: tuhiAudio , audioname: 'tu hi ashique'},  ];
+
+let current = 0;
+let currentsong = songs[current].ele;
+
+masterplay.addEventListener('click',()=>{
+currentsong.play();
+})
+
