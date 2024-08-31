@@ -1,4 +1,5 @@
 console.log('welcome to spotify');
+//add audios
 const songAudio = new Audio('/spotify/src/sounds/humdard.mp3');
 const heartAudio = new Audio('/spotify/src/sounds/heartbeat.mp3');
 const tuhiAudio = new Audio('/spotify/src/sounds/tu hi ashique.mp3');
@@ -8,8 +9,6 @@ const love = new Audio('/spotify/src/sounds/Love me like you do.mp3');
 const main = new Audio('/spotify/src/sounds/Main rang sharbaton ka.mp3');
 const saude= new Audio('/spotify/src/sounds/Saudebaazi.mp3');
 const tum = new Audio('/spotify/src/sounds/TUM SE HI.mp3');
-
-// tuhiAudio.play();
 
 //select buttons
 
