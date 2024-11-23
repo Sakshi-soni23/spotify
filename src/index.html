@@ -1,197 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link href="output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spotify</title>
-  <link href="output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+      body {
+        margin: 0;
+        
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #progressivebar {
+        width: 89vw;
+        cursor: pointer;
+      }
+      .songitem {
+        margin-left: 2rem;
+      }
+nav ul li:hover{
  
-  <style>
-    body {
-      margin: 0;
-    }
+ 
+}
+      nav ul li {
+        padding: 0 12px;
+        margin-left: 1rem;
+      }
 
-    * {
-      margin: 0px;
-      padding: 0px;
-    }
+      .songitem-container {
+        margin-top: 30px;
+      }
 
-
-    .brand {
-      display: flex;
-      align-items: center;
-      margin-left: -20rem;
-    }
-
-    .container {
-      min-height: 72vh;
-      margin-left: 9rem;
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: center;
-      width: 76%;
-    }
-
-    .bottom {
-      height: 60px;
-      bottom: 0;
-      align-items: center;
-      display: flex;
-    }
-
-    #progressivebar {
-      width: 80vw;
-      cursor: pointer;
-    }
-
-    .img-container img {
-      width: 20rem;
-      height: 29rem;
-      margin-right: 16rem;
-      margin-bottom: 1rem;
-    }
-
-    .soundlist h1 {
-      margin-left: 3rem;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-top: -1rem;
-    }
-
-    .songinfo {
-      margin-right: 66vw;
-      margin-top: -3rem;
-      height: 2rem;
-    }
-
-    .songitem {
-      margin-left: 2rem;
-    }
-
-    .brand img {
-      margin-left: -27rem;
-      width: 26rem;
-      height: 41px;
-    }
-
-    nav ul li {
-      padding: 0 12px;
-      margin-left: 1rem;
-    }
-
-    .songitem-container {
-      margin-top: 30px;
-    }
-
-    .hidden {
-      display: none;
-    }
-    #showSong{
-      margin-left: 1rem;
-    }
-    #timimg{
-      margin-left: 70rem;
-      margin-top: -2%;
-    }
-  </style>
-</head>
-
-<body>
-  <nav>
-    <ul class="h-16 bg-black list-none flex text-white justify-center">
-      <li class="brand text-white flex font-bold text-xl">
-        <img class="img" src="../img/logo block.png" alt="spotify" />Spotify
-      </li>
-      <li class="link mt-5 hover:cursor-pointer">Home</li>
-      <li class="link mt-5 hover:cursor-pointer">About</li>
-    </ul>
-  </nav>
-
-  <div class="container bg-black text-white flex font-serif m-7 rounded-md p-9">
-    <div class="img-container">
-      <img src="../img/imageback.jpg" alt="" />
-    </div>
-    <div class="soundlist">
-      <h1 class="">Best of NCS - No Copyrigths sounds</h1>
-      <div class="songitem-container">
+      .hidden {
+        display: none;
+      }
+      #showSong {
+        margin-left: -4rem;
+      }
+      #timing {
+        margin-left: -2rem;
+      }
+      #con:hover {
+        box-shadow: 3px 4px 5px 9px #a0deff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="">
+      <ul
+        class="h-12 bg-[#F6F5F2] border-[3px] border-black mt-2 rounded-[5rem] list-none flex text-black justify-around max-[700px]:h-56 max-[700px]:transition-all max-[700px]:delay-\[1\] max-sm:w-\[100%\] max-[700px]:flow-root max-sm:transition-all max-sm:delay-\[2\]"
+      >
+        <li
+          class="brand text-black flex font-bold text-xl items-center max-sm:ml-32"
+        >
+          <img
+            class="img w-6 max-[700px]:mt-4 mr-2"
+            src="../img/logo.jpg"
+            alt="musicbeat"
+          />
+          <span class="max-[700px]:ml-0 max-[600px]:mt-[5px]"> MusicBeat</span>
+        </li>
         <div
-          class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full" src="../img/song img.jpg" alt="" />
-          <span>Tu hi haqeeat</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
+          class="flex max-[700px]:text-center max-[700px]:flex-col max-[700px]:pointer text-black -mt-2 font-bold"
+        >
+          <li class="link mt-5 hover:cursor-pointer">Home</li>
+          <li class="link mt-5 hover:cursor-pointer">
+            <a href="../src/songlist.html">PlayList</a>
+          </li>
         </div>
+      </ul>
+    </nav>
 
-        <div
-          class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-5 mr-5 mt-1 mb-0 rounded-full" src="../img/tum se hi.jpg" alt="" />
-          <span>Tum se hi</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
-        </div>
+    <div
+      class="min-h-[72vh] flex-row-reverse items-center justify-center w-5/6 bg-[#0d1140] text-white flex font-serif mt-[2%] mb-[2%] m-auto rounded-md max-[700px]:hidden"
+      id="con"
+    >
+      <div class="img-container">
+        <video src="../img/MusicBeat (3).mp4"></video class="h-[300px] w-72 h-96" >
+      </div>
+      <div class="soundlist">
+        <h1 class="ml-9">Best of NCS - No Copyrigths sounds</h1>
+        <div class="songitem-container">
+          <div
+            class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/humdard.jpg"
+              alt=""
+            />
+            <span>Humdard</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
 
-        <div
-          class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-70 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full" src="../img/saudebaazi.jpg" alt="" />
-          <span>Saudebaazi</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
-        </div>
+          <div
+            class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-1 mb-0 rounded-full"
+              src="../img/heart.jpg"
+              alt=""
+            />
+            <span>Heartbeat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
 
-        <div
-          class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full" src="../img/aaj ki raat.jpg" alt="" />
-          <span>Aaj ki raat</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
-        </div>
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/song img.jpg"
+              alt=""
+            />
+            <span>Tu hi haqeeqat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
 
-        <div
-          class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-70 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full" src="../img/humdard.jpg" alt="" />
-          <span>Humdard</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
-        </div>
+          <div
+            class="songitem w-80 flex bg-white h-10 text-black mt-3 mb-3 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/aaj ki raat.jpg"
+              alt=""
+            />
+            <span>Aaj ki raat</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
 
-        <div
-          class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-80 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full" src="../img/love me.jpg" alt="" />
-          <span>Love me like</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
-        </div>
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-70 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/dil meri.jpg"
+              alt=""
+            />
+            <span>Dil meri na sunne</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
 
-        <div
-          class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-60 justify-between items-center rounded-3xl">
-          <img class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full" src="../img/heart.jpg" alt="" />
-          <span>Heartbeat</span>
-          <span class="songicon"><span class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center">05:45<i
-                class="cursor-pointer fa-regular fa-circle-play"></i></span></span>
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-80 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-5 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/love me.jpg"
+              alt=""
+            />
+            <span>Love me like</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
+
+          <div
+            class="songitem flex bg-white h-10 text-black mt-3 mb-3 w-80 mr-60 justify-between items-center rounded-3xl"
+          >
+            <img
+              class="w-9 ml-6 mr-5 mt-0 mb-0 rounded-full"
+              src="../img/rang.jpg"
+              alt=""
+            />
+            <span>Main rang</span>
+            <span class="songicon"
+              ><span
+                class="text ml-6 mr-6 mt-0 mb-0 hover:cursor-pointer items-center"
+                >05:45<i
+                  class="boxitem cursor-pointer fa-regular fa-circle-play"
+                ></i></span
+            ></span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="soundbanner"></div>
-  </div>
-  <div class="bottom bottom-0 bg-black text-white flex-col">
-    <input type="range" name="range" id="progressivebar" min="0" max="100" />
-    <div class="icons mt-3">
-      <i class="cursor-pointer fa-solid fa-2x fa-backward" id="previous"></i>
-      <i class="cursor-pointer fa-regular fa-2x fa-circle-play" id="masterplay"></i>
-      <i class="cursor-pointer fa-regular fa-2x fa-circle-pause hidden" id="pause"></i>
-      <i class=" cursor-pointer fa-solid fa-2x fa-forward" id="next"></i>
+    <div
+      class="h-20 flex items-center bottom-0 bg-[#F6F5F2] text-black flex-col max-[700px]:hidden font-bold"
+    >
+      <input
+        type="range"
+        name="range"
+        id="progressivebar"
+        min="0"
+        max="100"
+        value="0"
+        class="mt-2"
+      />
+      <div class="flex justify-between w-4/5 max-[700px]:hidden">
+        <div class="songinfo flex max-[700px]:hidden w-8">
+          <span id="showSong" class=""></span>
+        </div>
+        <div class="icons">
+          <i
+            class="cursor-pointer fa-solid fa-2x fa-backward"
+            id="previous"
+          ></i>
+          <i
+            class="cursor-pointer fa-regular fa-2x fa-circle-play"
+            id="masterplay"
+          ></i>
+          <i
+            class="cursor-pointer fa-regular fa-2x fa-circle-pause hidden"
+            id="pause"
+          ></i>
+          <i class="cursor-pointer fa-solid fa-2x fa-forward" id="next"></i>
+        </div>
+        <div id="timimg">6:00</div>
+      </div>
     </div>
-  <div class="songinfo flex">
-      <img src="../img/gif.playing.gif" alt="" width="40px">
-      <span id="showSong"></span>
-     </div>
-     <span id="timimg"> 6:00 </span>
-  </div>
-</body>
-<script src="https://example.com/fontawesome/v6.5.2/js/fontaweshome.js" data-auto-replace-svg="nest"></script>
-<script src="https://example.com/fontawesome/v6.5.2/js/solid.js"></script>
-<script src="https://example.com/fontawesome/v6.5.2/js/brands.js"></script>
-<script src="/spotify/src/javascript.js"></script>
+  </body>
+  <script
+    src="https://example.com/fontawesome/v6.5.2/js/fontaweshome.js"
+    data-auto-replace-svg="nest"
+  ></script>
+  <script src="https://example.com/fontawesome/v6.5.2/js/solid.js"></script>
+  <script src="https://example.com/fontawesome/v6.5.2/js/brands.js"></script>
+  <script src="/spotify/src/javascript.js"></script>
 </html>

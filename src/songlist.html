@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>playList</title>
+    <style>
+      .heading {
+        margin: 21px 33px 20px;
+        font-size: 20px;
+      }
+      .play {
+        margin: 40px 0 0 30px;
+      }
+      span::before {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 8px;
+        border: 1px solid gray;
+        border-radius: 50%;
+      }
+      span::before:hover {
+        color: white;
+      }
+      h4 {
+        display: flex;
+        align-items: center;
+      }
+      h4:hover span::before {
+        border: 1px solid white;
+      }
+      .active {
+        display: none;
+      }
+      .song_menu li{
+       padding: 20px 14px;
+    font-size: 19px;
+    color: gray;;
+      }
+      .song_menu{
+        box-shadow: 9px -14px 12px -1px rgb(72, 196, 245);
+      }
+    .vol .dot::before{
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 1px solid rgb(72, 196, 245);
+        border-radius: 50%;
+        left: -6px;
+        top: -5px;
+        box-shadow: inset 1px 0px 3px rgb(72, 196, 245);
+
+      } 
+      .vol{
+        align-items: center;
+      }
+      .song-side h1{
+        font-size: 30px;
+    color: skyblue;
+    font-family: serif;
+   margin: 118px 0px 0px 77px;
+      }
+      .song-side p{
+        font-size: 16px;
+    font-family: math;
+    margin-left: 62px;
+    margin-top: 22px;
+      }
+      .card-conatiner h1{
+        font-size: 11px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-top: 3px;
+      }
+      .song-result {
+        display: flex;
+        align-items: center;
+        background-color: #26224b;
+        margin-bottom: 15px;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+       .song-result img {
+       width: 47px;
+    height: 45px;
+        margin-right: 20px;
+        border-radius: 10px;
+      }
+
+      .song-result div {
+        flex: 1;
+      }
+
+      .song-result h1 {
+        font-size: 18px;
+        margin: 0;
+        color: #6ccff0;
+      }
+
+      .song-result p {
+        font-size: 16px;
+        color: #e0e0e0;
+        text-align: center;
+        margin-left: 2px;
+      }
+
+      .song-result audio {
+        margin-left: 20px;
+      }
+      .logo{
+        column-gap: 17px;
+        justify-content: flex-end;
+        align-items: stretch;
+      }
+.song-results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 530px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #6ccff0; /* Optional: Add a border for clarity */
+    border-radius: 8px;
+}
+
+.song-result {
+    background: #26224b;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-result img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.song-results::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+}
+
+.song-results::-webkit-scrollbar-thumb {
+    background: #36e2ec; /* Color of the scroll thumb */
+    border-radius: 10px;
+}
+
+.song-results::-webkit-scrollbar-track {
+    background: #26224b; /* Background of the scrollbar track */
+} </style>
+  </head>
+  <body
+    class="w-[100%] h-[100vh] bg-[#151332] flex align-middle justify-center p-5 m-0"
+  >
+    <div>
+      <a href="../src/index.html"
+        ><i class="fa-solid fa-circle-left text-white -ml-28 cursor-pointer max-[700px]:text-black"></i
+      ></a>
+    </div>
+    <header
+      class="head w-[85%] h-[95%] border-2 border-[white] flex overflow-hidden text-white mt-5 max-[700px]:bg-white max-[700px]:text-white">
+      <div class="song_menu relative w-[19%] h-[100%] bg-[#221f50] max-[700px]:hidden">
+        <h1 class="heading font-bold">PlayLists</h1>
+        <div class="play">
+          <h4
+            class="pb-5 hover:text-white cursor-pointer ease-linear duration-[3sec] text-[#36e2ec] font-bold"
+          >
+            <span class="active relative mr-5 text-center"></span
+            ><i class="fa-solid fa-music flex mr-[20px]"></i>Playlist
+          </h4>
+          <h4
+            class="pb-5 text-gray-500 font-small hover:text-white cursor-pointer ease-linear duration-[3sec]"
+          >
+           <a href="../src/video.html"> <span class="relative mr-5 text-center"></span>Video</a>
+          </h4>
+        </div>
+        <div class="song w-[100%] h-[380px]  mt-6 max-[700px]:hidden">
+         <li class="list-none hover:text-[#36e2ec] cursor-pointer  flex justify-evenly align-middle -mt-1"><h1 class="ml-0">  01.</h1> <b>Humdard</b><i class="fa-solid mt-2 fa-headphones"></i></ii>
+         <li class="list-none hover:text-[#36e2ec] cursor-pointer  flex justify-evenly align-middle -mt-1"><h1 class="ml-0">  02.</h1> <b>Heartbeat</b><i class="fa-solid mt-2 fa-headphones"></i></li>
+         <li class="list-none hover:text-[#36e2ec] cursor-pointer  flex justify-evenly align-middle -mt-1"><h1 class="ml-0">  03.</h1> <b>Tum hi ho</b><i class="fa-solid  mt-2 fa-headphones"></i></li>
+         <li class="list-none hover:text-[#36e2ec] cursor-pointer  flex justify-evenly align-middle -mt-1"><h1 class="ml-0">  04.</h1> <b>Aaj  ki  raat</b><i class="fa-solid  mt-2 fa-headphones"></i></li>
+         <li class="list-none hover:text-[#36e2ec] cursor-pointer  flex justify-evenly align-middle -mt-1"><h1 class="ml-0">  05.</h1> <b>Humsafar</b><i class="fa-solid  mt-2 fa-headphones"></i></li>
+        </div>
+      </div>
+      
+    <!-- Search bar and buttons -->
+    <div class="search-container relative flex flex-col w-[75%] mx-auto mt-4">
+    <div class="flex items-center">
+        <input type="search" id="searchbar" placeholder="Search Song" 
+            class="h-9 mb-4 ml-2 p-6 pl-10 bg-[#26224b] rounded-xl text-white w-full">
+        <i class="fa-regular fa-rectangle-xmark text-white cursor-pointer -ml-[22px] -mt-[9px]" id="cancelbtn"></i>
+        <button id="searchbtn" class="ml-4 p-2 bg-[#36e2ec] text-black font-bold rounded">SEARCH</button>
+    </div>
+    <div class="song-results mt-4" id="song-results"></div>
+</div>
+    </header>      
+  </body>
+  <script src="/spotify/src/list.js"></script> 
+   <script>
+
+</script>
+</html>
+<!-- AIzaSyAqrWMKtUXZGHNWk4vMhpJsjAeEJrR15S4 -->

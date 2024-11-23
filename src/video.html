@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search YouTube</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    h1{
+        font-size: 20px;
+    font-family: serif;
+    color: aqua;
+    }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000B58;
+  color: white;
+}
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #6ccff0;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+#video-player-section {
+  padding: 20px;
+  background-color: #2f2962;
+  color: white;
+}
+.hidden {
+  display: none;
+}
+#video-player {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+  background-color: black;
+}
+#related-videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+#related-videos-container img {
+  cursor: pointer;
+}
+
+
+</style>
+<body>
+  <header>
+    <h1 class="max-[700px]:hidden">Videos</h1>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search videos...">
+      <button id="search-button">Search</button>
+    </div>
+  </header>
+ <main>
+    <!-- Video Player Section -->
+    <section id="video-player-section" class="hidden">
+      <div id="video-player"></div>
+      <h2>Related Videos</h2>
+      <div id="related-videos-container"></div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section id="video-container"></section>
+  </main>
+  <script src="../src/video.js"></script>
+</body>
+</html>

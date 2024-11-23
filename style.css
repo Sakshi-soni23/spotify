@@ -7,16 +7,4 @@ body{
     margin:0;
     padding: 0;
 }
-nav{
-    font-family: "Open Sans", sans-serif;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-    height: 65px;
-    background-color: black;
-}
-.brand img{
-    width: 12px;
-    height: 30px;
-}
+ 
